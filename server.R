@@ -7,8 +7,6 @@ require(scales)
 require(ggplot2)
 source('helper.R')
 
-data <- readRDS("data/premData.rds")
-
 shinyServer(function(input, output) {
   
   output$table1 <- renderTable({
