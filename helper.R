@@ -9,6 +9,8 @@ require(RColorBrewer)
 require(scales)
 require(ggplot2)
 
+data <- readRDS("premData.rds")
+
 totalCostTable <- function(liveBirths=790000, xPreterm=0.0048, vPreterm=0.0123,
                            mPreterm=0.0546, start=1, end=10, cost='total', indirect=TRUE) {
   
@@ -89,8 +91,7 @@ plotMaker <- function(liveBirths=790000, xPreterm=0.0048, vPreterm=0.0123,
   df$premie_cat <- as.character(df$premie_cat)
   
   #create color scheme for stack plot.
-  colors <- brewer.pal(11, "Spectral")
-  myCols <- pal(11)
+  myCols <- brewer.pal(11, "Spectral")
   names(myCols) <- levels(df$cost_cat)
   colScale <- scale_fill_manual(name='Resource Use', values=myCols)
   
