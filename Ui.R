@@ -35,7 +35,7 @@ shinyUI(fluidPage(
       tabPanel('Main',
                br(),
                p('Welcome to the interactive webapp exploring the burden of illness for premature births, 
-                 based on incidence, resource use, and costs from the United Kingdom.'),
+                 based on incidence, resource use, and costs from the United Kingdom. All costs in 2015 GBP'),
                p('Utilise the input sidebar to enter the parameters of the model. Then select
                  the appropriate plotting options to present the corresponding results.
                  Detailed burden of ilnness costs can be seen on the Total Costs tab, with all

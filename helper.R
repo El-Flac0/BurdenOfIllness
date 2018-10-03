@@ -101,13 +101,13 @@ plotMaker <- function(liveBirths=790000, xPreterm=0.0048, vPreterm=0.0123,
     g <- ggplot(df, aes(x=premie_cat, y=total, fill=cost_cat)) +
       geom_bar(position='stack', stat='identity') +
       colScale + 
-      scale_y_continuous(name='Total Cost (Million GBP)', labels = comma) +
+      scale_y_continuous(limits=c(0, 3000), name='Total Cost (Million GBP)', labels = comma) +
       xlab('Max Gestational Weeks')
   } else if (cost == 'costPerCase') {
     g <- ggplot(df, aes(x=premie_cat, y=each_cost, fill=cost_cat)) +
       geom_bar(position='stack', stat='identity') +
       colScale + 
-      scale_y_continuous(name='Cost per Newborn (GBP)', labels = comma) +
+      scale_y_continuous(limits=c(0, 125000), name='Cost per Newborn (GBP)', labels = comma) +
       xlab('Max Gestational Weeks') 
   }
   g

@@ -36,7 +36,7 @@ shinyServer(function(input, output) {
                cost=cost,
                indirect=indirect)
     
-  }, include.rownames=FALSE)
+  }, include.rownames=FALSE, striped=TRUE)
   
   output$plot1 <- renderPlot({
     
